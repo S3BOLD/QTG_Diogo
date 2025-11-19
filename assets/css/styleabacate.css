@@ -1,0 +1,280 @@
+/* ================= RESET BÁSICO ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Cores utilizadas no programa*/
+:root {
+  --dark: #333;
+  --light: #fff;
+  --gray: #f9f9f9;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: absolute;   /* fica sobre o hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* deixa a imagem aparecer por trás */
+  color: #fff;  /* texto branco pro contraste */
+  display: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 10; /* garante que fique por cima da imagem */
+ 
+}
+.logo b {
+  padding: 20px;
+}
+
+header .usuario{
+ display: flex;
+justify-content: right;
+
+}
+header .logo {
+  font-size: 100px;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5lh;
+  
+}
+
+/*muda o espaçamento entre as tags*/
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+/*estilos das tags superiores*/
+header nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+
+}
+/*cor da letra quando passa o mouse*/
+nav a:hover{
+    text-decoration: none;
+    color: #ff0303;
+}
+
+header .btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  
+  
+}
+
+/* Cabeçalho com imagem*/
+
+.hero {
+  height: 70vh;
+  background: url("https://static.vecteezy.com/ti/fotos-gratis/t2/6177733-fundo-laranja-abstratoe-fundo-de-verao-gratis-foto.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content:center; /*alinha letras no cetro*/
+  text-align: center;
+  color: var(--light);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 15px;
+ 
+}
+
+.hero p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: var(--primary);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+/* Estilo para página de detalhe de receita no estilo Panelinha */
+
+.receita-detalhe {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: var(--dark);
+}
+
+.receita-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.receita-titulo {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ffa530
+}
+
+.receita-meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.receita-conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.receita-imagem img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.receita-descricao p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.receita-info h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #ffa530
+}
+
+.receita-info ul,
+.receita-info ol {
+  margin-left: 20px;
+}
+
+.receita-info li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Comentários */
+.comentarios {
+  margin-top: 20px;
+}
+
+.comentarios textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.comentarios .nota {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comentarios select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+.btn-comentar {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*SUGESTÕES*/
+.sugestoes {
+  position: absolute;
+  top: 900px; /* você pode ajustar este valor para alinhar exatamente com a receita */
+  right: 60px;
+  width: 260px;
+}
+
+.sugestoes h2 {
+  font-size: 22px;
+  color: #ffa530;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.sugestao-item {
+  margin-bottom: 25px;
+}
+
+.sugestao-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.sugestao-item .categoria {
+  color: #888;
+  font-size: 14px;
+}
+
+.sugestao-item .titulo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.sugestao-item {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.sugestao-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.sugestao-categoria {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 2px;
+}
+
+.sugestao-nome {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.sugestao-nome:hover {
+  color: #ff7b00;
+  text-decoration: underline;
+}

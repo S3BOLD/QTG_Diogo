@@ -1,0 +1,250 @@
+/* ================= RESET BÁSICO ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Cores utilizadas no programa*/
+:root {
+  --dark: #333;
+  --light: #fff;
+  --gray: #f9f9f9;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: absolute;   /* fica sobre o hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* deixa a imagem aparecer por trás */
+  color: #fff;  /* texto branco pro contraste */
+  display: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 10; /* garante que fique por cima da imagem */
+ 
+}
+.logo b {
+  padding: 20px;
+}
+
+header .usuario{
+ display: flex;
+justify-content: right;
+
+}
+header .logo {
+  font-size: 100px;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5lh;
+  
+}
+
+
+/*muda o espaçamento entre as tags*/
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+/*estilos das tags superiores*/
+header nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+
+}
+/*cor da letra quando passa o mouse*/
+nav a:hover{
+    text-decoration: none;
+    color: #f88a8a;
+}
+
+header .btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  
+  
+}
+
+/* Cabeçalho com imagem*/
+
+.hero {
+  height: 70vh;
+  background: url("https://static.vecteezy.com/ti/fotos-gratis/t2/6177733-fundo-laranja-abstratoe-fundo-de-verao-gratis-foto.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content:center; /*alinha letras no cetro*/
+  text-align: center;
+  color: var(--light);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 15px;
+ 
+}
+
+.hero p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: var(--primary);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Estilo da seção Sobre */
+.sobre {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  align-items:top right; /* agora alinha pelo fundo */
+}
+
+
+/* BLOCO ESQUERDA */
+
+.contato {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato-container {
+  display: grid;
+  gap: 40px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 500px;
+  width: 100%;
+  
+}
+
+.form-container select{
+  display: flex;
+  justify-content: center;
+}
+.form-container {
+  justify-self: center;   /* centraliza horizontalmente */
+  align-self: center;     /* centraliza verticalmente */
+  width: 100%;
+  max-width: 400px;       /* opcional para não ficar muito largo */
+}
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #792a2a;
+  outline: none;
+  box-shadow: 0 0 6px rgba(121, 42, 42, 0.3);
+}
+
+.form-container button {
+  background: #ffa530;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.form-container button:hover {
+  background: #5a1f1f;
+}
+
+.programas {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+
+.programas li {
+  background: #792a2a77;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.programas li:hover {
+  transform: translateX(5px);
+  background: #792a2a;
+}
+
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #ffa530;
+  color: var(--light);
+  padding: 20px 50px;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+
+}
+
+footer ul a {
+  text-decoration: none;
+  color: var(--light);
+  font-weight:lighter;
+  text-decoration:none;
+  color: #f1f1f1;
+}
+
+

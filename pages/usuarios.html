@@ -30,14 +30,16 @@
   <!-- ================= FORM CONTATO ================= -->
 <section class="contato">
   <div class="contato-container">
-      
     <!-- COLUNA DIREITA (FORMULÁRIO) -->
     <div class="form-container">
-      <form action="processar.php" method="post">
+      <form action="processar.php" method="post"enctype="multipart/form-data">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="email" name="email" placeholder="Seu e-mail" required>
         <input type="date" name="nascimento" required>
         <input type="number" name="cep" placeholder="Digite seu CEP" required>
+        
+        <input type="hidden" name="tipo_formulario" value="cadastro_usuario">
+
         <select id="genero" name="sexo" >
           <option value="mulher" > Mulher </option>
           <option value="homem" > Homem </option>

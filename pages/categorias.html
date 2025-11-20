@@ -34,12 +34,13 @@
   <!-- ================= FORM CONTATO ================= -->
 <section class="contato">
   <div class="contato-container">
-      
-    <!-- COLUNA DIREITA (FORMULÁRIO) -->
     <div class="form-container">
-      <form action="processar.php" method="post">
-        <input type="text" name="nome" placeholder="Descrição..." required>
-        <input type="file">
+      <form action="processar.php" method="post" enctype="multipart/form-data">
+        
+        <input type="hidden" name="tipo_formulario" value="cadastro_receita">
+        
+        <input type="text" name="descricao" placeholder="Descrição..." required> 
+        <input type="file" name="arquivo">
 
         <button type="submit">Enviar</button>
       </form>

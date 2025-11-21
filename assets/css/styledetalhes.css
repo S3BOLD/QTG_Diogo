@@ -1,0 +1,176 @@
+/* =============== RESET =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --dark: #333;
+  --light: #fff;
+  --gray: #f9f9f9;
+  --primary: #ffa530;
+  --danger: #e63946;
+}
+
+/* =============== HEADER =============== */
+header {
+  background-color: #ffa530;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: white;
+  background: #e63946;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #b81d29;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* =============== CONTAINER =============== */
+.detalhes-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* Imagem principal */
+#detalhe-imagem {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Título */
+#detalhe-titulo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Categoria e região */
+#detalhe-categoria,
+#detalhe-area {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 22px;
+}
+
+/* Ingredientes */
+#lista-ingredientes {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#lista-ingredientes li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Instruções */
+#detalhe-instrucoes {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ================= RESPONSIVIDADE ================ */
+
+/* Tablet 1024px */
+@media (max-width: 1024px) {
+  .detalhes-container {
+    max-width: 700px;
+    padding: 20px;
+  }
+
+  #detalhe-titulo {
+    font-size: 26px;
+  }
+}
+
+/* Mobile 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #detalhe-imagem {
+    height: auto;
+  }
+
+  .detalhes-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  #detalhe-titulo {
+    font-size: 24px;
+  }
+}
+
+/* Celular pequeno 480px */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  #detalhe-titulo {
+    font-size: 20px;
+  }
+}
+
+/* =======================
+   Monitores 19" (1366px)
+   =======================*/
+@media (max-width: 1440px) {
+  .detalhes-container {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 1366px) {
+  header {
+    padding: 12px 25px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .detalhes-container {
+    max-width: 800px;
+  }
+
+  #detalhe-titulo {
+    font-size: 28px;
+  }
+}

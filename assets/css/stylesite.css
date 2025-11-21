@@ -350,6 +350,23 @@ footer ul a {
 }
 
 /* ================= LISTA DE RECEITAS ================= */
+.btn-detalhes {
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px 15px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-detalhes:hover {
+  background-color: #b81d29;
+}
+
 .receitas-lista {
   text-align: center;
   padding: 20px;

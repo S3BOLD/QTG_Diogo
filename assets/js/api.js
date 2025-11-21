@@ -1,8 +1,11 @@
-// =============== CARREGAR RECEITAS DA API ===============
+// =============== FUNÇÃO PARA IR PARA A PÁGINA DE DETALHES ===============
+function verDetalhes(id) {
+  window.location.href = `detalhes.html?id=${id}`;
+}
 
+// =============== CARREGAR RECEITAS DA API ===============
 async function carregarReceitas() {
-  const url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"; 
-  // Aqui você pode trocar por qualquer categoria.
+  const url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert";
 
   try {
     const response = await fetch(url);
@@ -19,15 +22,18 @@ async function carregarReceitas() {
     const cardsDiv = document.createElement("div");
     cardsDiv.classList.add("cards");
 
-    data.meals.slice(0, 8).forEach(meal => {   // pega só 8 receitas para manter seu layout
-      const card = document.createElement("a");
+    data.meals.slice(0, 8).forEach(meal => {
+      const card = document.createElement("div");
       card.classList.add("card");
-      card.href = "#";  // futuramente pode abrir página da receita
 
       card.innerHTML = `
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="retangulo-img">
         <h3>${meal.strMeal}</h3>
         <p>Receita deliciosa!</p>
+
+        <button class="btn-detalhes" onclick="verDetalhes('${meal.idMeal}')">
+          Ver detalhes
+        </button>
       `;
 
       cardsDiv.appendChild(card);
@@ -35,7 +41,6 @@ async function carregarReceitas() {
 
     container.appendChild(cardsDiv);
 
-    // adiciona depois da primeira seção de cards do site
     const primeiraSection = document.querySelectorAll(".projects")[0];
     primeiraSection.insertAdjacentElement("afterend", container);
 
@@ -46,10 +51,10 @@ async function carregarReceitas() {
 
 carregarReceitas();
 
-// =============== BUSCA POR NOME ===============
 
+// =============== BUSCA POR NOME ===============
 document.getElementById("btnBuscar").addEventListener("click", buscarReceita);
-document.getElementById("searchInput").addEventListener("keypress", function(e) {
+document.getElementById("searchInput").addEventListener("keypress", function (e) {
   if (e.key === "Enter") buscarReceita();
 });
 
@@ -68,7 +73,7 @@ async function buscarReceita() {
     const response = await fetch(url);
     const data = await response.json();
 
-    container.innerHTML = ""; // limpa resultados anteriores
+    container.innerHTML = "";
 
     if (!data.meals) {
       container.innerHTML = "<p style='text-align:center;'>Nenhuma receita encontrada.</p>";
@@ -76,14 +81,17 @@ async function buscarReceita() {
     }
 
     data.meals.forEach(meal => {
-      const card = document.createElement("a");
+      const card = document.createElement("div");
       card.classList.add("card");
-      card.href = "#";
 
       card.innerHTML = `
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="retangulo-img">
         <h3>${meal.strMeal}</h3>
         <p>Veja esta receita deliciosa!</p>
+
+        <button class="btn-detalhes" onclick="verDetalhes('${meal.idMeal}')">
+          Ver detalhes
+        </button>
       `;
 
       container.appendChild(card);
@@ -94,38 +102,43 @@ async function buscarReceita() {
   }
 }
 
-// BUSCA POR CATEGORIA // 
 
+// =============== BUSCA POR CATEGORIA ===============
 async function buscarReceitas(categoria) {
-    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoria}`;
+  const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoria}`;
 
-    document.getElementById("resultado").innerHTML = "<p>Carregando receitas...</p>";
+  document.getElementById("resultado").innerHTML = "<p>Carregando receitas...</p>";
 
-    try {
-        const resposta = await fetch(url);
-        const dados = await resposta.json();
+  try {
+    const resposta = await fetch(url);
+    const dados = await resposta.json();
 
-        if (!dados.meals) {
-            document.getElementById("resultado").innerHTML =
-                "<p>Nenhuma receita encontrada.</p>";
-            return;
-        }
-
-        const html = dados.meals
-            .map(meal => `
-                <div class="receita-card">
-                    <img src="${meal.strMealThumb}">
-                    <h3>${meal.strMeal}</h3>
-                </div>
-            `)
-            .join("");
-
-        document.getElementById("resultado").innerHTML = `
-            <h2>Receitas da categoria: ${categoria}</h2>
-            <div class="grid-receitas">${html}</div>
-        `;
-    } catch (e) {
-        document.getElementById("resultado").innerHTML =
-            "<p>Erro ao carregar receitas.</p>";
+    if (!dados.meals) {
+      document.getElementById("resultado").innerHTML =
+        "<p>Nenhuma receita encontrada.</p>";
+      return;
     }
+
+    const html = dados.meals
+      .map(meal => `
+          <div class="receita-card">
+              <img src="${meal.strMealThumb}">
+              <h3>${meal.strMeal}</h3>
+
+              <button class="btn-detalhes" onclick="verDetalhes('${meal.idMeal}')">
+                  Ver detalhes
+              </button>
+          </div>
+      `)
+      .join("");
+
+    document.getElementById("resultado").innerHTML = `
+        <h2>Receitas da categoria: ${categoria}</h2>
+        <div class="grid-receitas">${html}</div>
+    `;
+
+  } catch (e) {
+    document.getElementById("resultado").innerHTML =
+      "<p>Erro ao carregar receitas.</p>";
+  }
 }

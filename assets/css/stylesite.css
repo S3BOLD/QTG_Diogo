@@ -380,3 +380,69 @@ footer ul a {
 
 
 
+/* =======================
+   Ajuste para monitores 19"
+   (até 1440px)
+   ======================= */
+@media (max-width: 1440px) {
+
+  header {
+    padding: 10px 20px;
+  }
+
+  header .logo {
+    font-size: 60px;   /* reduz o tamanho gigante */
+    margin-top: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 60px; /* menor que os 80px atuais */
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+
+  /* GRID de 4 colunas → 3 colunas */
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  /* Imagens não ultrapassam */
+  .retangulo-img {
+    max-width: 250px;
+    margin-left: 0;
+  }
+}
+
+/* =======================
+   Ajuste fino p/ 1366px
+   ======================= */
+@media (max-width: 1366px) {
+
+  header .logo {
+    font-size: 48px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .retangulo-img {
+    max-width: 220px;
+  }
+}

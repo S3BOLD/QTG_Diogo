@@ -71,7 +71,7 @@ header nav ul {
 /*estilos das tags superiores*/
 header nav a {
   text-decoration: none;
-  color: #ffffff;
+  color: #333;
   font-weight: bold;
   display: inline-block;
   padding: 10px 15px;
@@ -213,5 +213,35 @@ footer ul a {
   }
 }
 
+/* ================= RESULTADOS DA API ================= */
+.resultado {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.grid-receitas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.receita-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #ffa530;
+  transition: 0.3s ease;
+}
+
+.receita-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.receita-card:hover {
+  transform: scale(1.05);
+}
 
 

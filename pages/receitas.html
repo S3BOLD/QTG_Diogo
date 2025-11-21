@@ -3,106 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Quase tudo gostoso </title>
+  <title>Quase Tudo Gostoso</title>
   <link rel="stylesheet" href="../assets/css/stylereceitas.css">
 </head>
 <body>
 
   <!-- ================= HEADER ================= -->
- <header>
-    <div class= "usuario"></div>
+<header>
+    <div class="usuario"></div>
+
     <a href="usuarios.html" target="_blank">
-<img src="../assets/img/user.png" alt="Perfil do Usuário" style="width:50px;height:50px;">
-</a>
+      <img src="../assets/img/user.png" alt="Perfil do Usuário" style="width:50px;height:50px;">
+    </a>
 
-      <div class="logo"> <p>Receitas</p></div>
-
+    <div class="logo"><p>Receitas</p></div>
 
     <nav>
       <ul>
-        <li><a href="site.html"> Início </a></li>
-        <li><a href="receitas.html"> Receitas </a></li>
+        <li><a href="site.html">Início</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
       </ul>
-  </header>
+    </nav>
+</header>
 
   
   <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-text">
-    </div>
-  </section>
+<section class="hero"></section>
 
-    <!-- Serviços -->
-
+<!-- ================= CARDS ================= -->
 <section class="projects">
   <div class="grid-projetos">
-  <div class="cards">
-    <a href="cafe.html" class="card">
-      <img src="../assets/img/cafe.png" alt="cafe" class="retangulo-img">
-      <h3>Café da Manhã</h3>
-    </a>
+    <div class="cards" id="lista-categorias">
 
-    <a href="almoco.html" class="card">
-      <img src="../assets/img/almoco.jpg" alt="almoco" class="retangulo-img">
-      <h3>Almoço</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Breakfast')">
+        <img src="../assets/img/cafe.png" class="retangulo-img">
+        <h3>Café da Manhã</h3>
+      </a>
 
-    <a href="happyhour.html" class="card">
-      <img src="../assets/img/happy.jfif" alt="happyhour" class="retangulo-img">
-      <h3>Happy Hour</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Beef')">
+        <img src="../assets/img/almoco.jpg" class="retangulo-img">
+        <h3>Almoço</h3>
+      </a>
 
-    <a href="jantar.html" class="card">
-      <img src="../assets/img/janta.png" alt="jantar" class="retangulo-img">
-      <h3>Jantar</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Chicken')">
+        <img src="../assets/img/frango.jpg" class="retangulo-img">
+        <h3>Aves</h3>
+      </a>
 
-    <a href="aperitivos.html" class="card">
-      <img src="../assets/img/aperitivo.jpg" alt="aperitivos" class="retangulo-img">
-      <h3>Aperitivos</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Pasta')">
+        <img src="../assets/img/massa.jfif" class="retangulo-img">
+        <h3>Massas</h3>
+      </a>
 
-    <a href="carnes.html" class="card">
-      <img src="../assets/img/carne-assada-com-cerveja-preta.jpg" alt="carnes" class="retangulo-img">
-      <h3>Carnes</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Vegetarian')">
+        <img src="../assets/img/semcarne.jfif" class="retangulo-img">
+        <h3>Sem Carne</h3>
+      </a>
 
-    <a href="aves.html" class="card">
-      <img src="../assets/img/frango.jpg" alt="aves" class="retangulo-img">
-      <h3>Aves</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Side')">
+        <img src="../assets/img/maio.png" class="retangulo-img">
+        <h3>Acompanhamentos</h3>
+      </a>
 
-    <a href="acompanhamentos.html" class="card">
-      <img src="../assets/img/maio.png" alt="acompanhamentos" class="retangulo-img">
-      <h3>Acompanhamentos</h3>
-    </a>
+      <a href="#" class="card" onclick="buscarReceitas('Starter')">
+        <img src="../assets/img/aperitivo.jpg" class="retangulo-img">
+        <h3>Aperitivos</h3>
+      </a>
 
-    <a href="semcarne.html" class="card">
-      <img src="../assets/img/semcarne.jfif" alt="semcarne" class="retangulo-img">
-      <h3>Sem Carne</h3>
-    </a>
-
-    <a href="massas.html" class="card">
-      <img src="../assets/img/massa.jfif" alt="massas" class="retangulo-img">
-      <h3>Massas</h3>
-    </a>
-
-    <a href="airfryer.html" class="card">
-      <img src="../assets/img/airfryer.jpg" alt="airfryer" class="retangulo-img">
-      <h3>Air Fryer</h3>
-    </a>
-
-    <a href="categorias.html" class="card">
-      <img src="../assets/img/categorias.png" alt="categorias" class="retangulo-img">
-      <h3>Adicionar Categorias</h3>
-    </a>
-
-  </div>
+    </div>
   </div>
 </section>
 
+<!-- ================= RESULTADOS DA API ================= -->
+<section id="resultado" class="resultado"></section>
+
+
   <!-- ================= FOOTER ================= -->
-  <footer>
+<footer>
     <div class="footer-content">
       <p>© 2025 - Todos os direitos reservados.</p>
       <ul>
@@ -111,7 +88,9 @@
         <li><a href="#">Ajuda</a></li>
       </ul>
     </div>
-  </footer>
+</footer>
+
+<script src="../assets/js/receitas.js"></script>
 
 </body>
 </html>

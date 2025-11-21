@@ -47,6 +47,41 @@ header .logo {
   
 }
 
+
+/* Barra de pesquisa */
+
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  gap: 10px;
+}
+
+.busca-input {
+  padding: 12px 20px;
+  width: 50%;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.busca-btn {
+  padding: 12px 25px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.busca-btn:hover {
+  background-color: rgb(180, 0, 0);
+}
+
+
+
 /*muda o espaçamento entre as tags*/
 header nav ul {
   list-style: none;
@@ -66,8 +101,6 @@ header nav a {
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  color: #ffffff;
-
 }
 /*cor da letra quando passa o mouse*/
 nav a:hover{
@@ -378,6 +411,110 @@ footer ul a {
   background: #eee;
 }
 
+/* ================= RESPONSIVIDADE ================ */
+
+/* TABLETS (até 1024px) */
+@media (max-width: 1024px) {
+
+  header .logo {
+    font-size: 60px;
+    margin-top: 0;
+  }
+
+  .cards,
+  .receitas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .retangulo-img {
+    max-width: 200px;
+    margin-left: 0;
+  }
+}
+
+/* CELULARES GRANDES (até 768px) */
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header .logo {
+    font-size: 45px;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cards,
+  .receitas-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .cards h3,
+  .cards p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .retangulo-img {
+    margin: 0 auto;
+  }
+
+  .highlight {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* CELULARES PEQUENOS (até 480px) */
+@media (max-width: 480px) {
+
+  header .logo {
+    font-size: 32px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .busca-input {
+    width: 100%;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 
 /* =======================

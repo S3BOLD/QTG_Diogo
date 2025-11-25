@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Usuário</title>
-  <link rel="stylesheet" href="../assets/css/styleusuarios.css">
+  <link rel="stylesheet" href="../assets/css/stylelogin.css">
 </head>
 <body>
 
   <!-- ================= HEADER ================= -->
   <header>
-    <div class="logo">Usuário</div>
+    <div class="logo"><b style="color: red;"> Login </b> Usuário</div>
     <nav>
       <ul>
         <li><a href="site.html"> Início </a></li>
@@ -27,32 +27,18 @@
     </div>
   </section>
 
-  <!-- ================= FORM CONTATO ================= -->
-<section class="contato">
-  <div class="contato-container">
+  <!-- ================= FORM LOGIN ================= -->
+<section class="login">
+  <div class="login-container">
     <!-- COLUNA DIREITA (FORMULÁRIO) -->
     <div class="form-container">
-      <form action="processar.php" method="post"enctype="multipart/form-data">
-        <input type="text" name="nome" placeholder="Seu nome" required>
+        <form action="site.html" method="request">
         <input type="email" name="email" placeholder="Seu e-mail" required>
-        <input type="date" name="nascimento" required>
-        <input type="number" name="cep" placeholder="Digite seu CEP" required>
+        <input type="password" name="senha" placeholder="Digite sua senha" required>
         
         <input type="hidden" name="tipo_formulario" value="cadastro_usuario">
 
-        <select id="genero" name="sexo" >
-          <option value="mulher" > Mulher </option>
-          <option value="homem" > Homem </option>
-          <option value="outro" > Prefiro não dizer</option>
-        </select>
-        <br>
-
-        <button id="enviar" type="submit">Enviar</button>
-        <br>
-
-        <a class="link-login" href="login.html" >
-          já possui uma conta? Faça login
-        </a>
+        <button type="submit">Acessar</button>
       </form>
     </div>
 
@@ -68,7 +54,6 @@
         <li><a href="#">Ajuda</a></li>
       </ul>
     </div>
-    
   </footer>
   
 

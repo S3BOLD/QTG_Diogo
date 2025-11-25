@@ -25,6 +25,38 @@
         <h3>Modo de Preparo</h3>
         <p id="detalhe-instrucoes"></p>
     </div>
+        
+    <div class="avaliacao-container">
+
+        <h2>Avalie esta receita! 😁</h2>
+
+        
+        <div class="rating">
+            <input type="radio" id="star5" name="estrela" value="5">
+            <label for="star5">★</label>
+
+            <input type="radio" id="star4" name="estrela" value="4">
+            <label for="star4">★</label>
+
+            <input type="radio" id="star3" name="estrela" value="3">
+            <label for="star3">★</label>
+
+            <input type="radio" id="star2" name="estrela" value="2">
+            <label for="star2">★</label>
+
+            <input type="radio" id="star1" name="estrela" value="1">
+            <label for="star1">★</label>
+        </div>
+
+        
+        <textarea id="comentario" placeholder="Escreva um comentário sobre esta receita..." rows="4"></textarea>
+
+        <button id="enviarAvaliacao">Enviar avaliação</button>
+
+
+        <div id="lista-avaliacoes"></div>
+
+    </div>
 
     <script src="../assets/js/detalhes.js"></script>
 </body>

@@ -134,7 +134,7 @@ header .btn {
 
 /* BLOCO ESQUERDA */
 
-.contato {
+.login {
   padding: 80px 20px;
   background: #f9f9f9;
   display: flex;
@@ -142,7 +142,7 @@ header .btn {
   align-items: center;
 }
 
-.contato-container {
+.login-container {
   display: grid;
   gap: 40px;
   background: #fff;
@@ -247,13 +247,4 @@ footer ul a {
   color: #f1f1f1;
 }
 
-.link-login {
-  text-decoration: none;
-  color: orange;
-  margin-top: 10px;
-}
 
-.link-login:hover {
-  color: red;
-
-}

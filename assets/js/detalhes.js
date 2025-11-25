@@ -46,6 +46,39 @@ async function carregarDetalhes() {
     } catch (error) {
         console.error("Erro ao carregar detalhes:", error);
     }
+
+
 }
 
 carregarDetalhes();
+
+document.getElementById("enviarAvaliacao").addEventListener("click", function () {
+    const nota = document.querySelector("input[name='estrela']:checked");
+    const comentario = document.getElementById("comentario").value.trim();
+
+    if (!nota) {
+        alert("Por favor, selecione uma nota.");
+        return;
+    }
+
+    if (comentario === "") {
+        alert("Digite um comentário.");
+        return;
+    }
+
+
+    const div = document.createElement("div");
+    div.classList.add("avaliacao-item");
+
+    div.innerHTML = `
+        <strong>${nota.value} estrelas</strong><br>
+        <p>${comentario}</p>
+    `;
+
+    document.getElementById("lista-avaliacoes").appendChild(div);
+
+    document.getElementById("comentario").value = "";
+    document.querySelector("input[name='estrela']:checked").checked = false;
+
+    alert("Avaliação enviada!");
+});

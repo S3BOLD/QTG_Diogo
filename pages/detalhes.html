@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Receita</title>
+    <link rel="stylesheet" href="../assets/css/styledetalhes.css">
+</head>
+<body>
+
+    <header>
+        <a href="site.html" class="back-button">⬅ Voltar</a>
+        <h1>Detalhes da Receita</h1>
+    </header>
+
+    <div class="detalhes-container">
+        <img id="detalhe-imagem" alt="Imagem da Receita">
+        <h2 id="detalhe-titulo"></h2>
+        <p id="detalhe-categoria"></p>
+        <p id="detalhe-area"></p>
+
+        <h3>Ingredientes</h3>
+        <ul id="lista-ingredientes"></ul>
+
+        <h3>Modo de Preparo</h3>
+        <p id="detalhe-instrucoes"></p>
+    </div>
+        
+    <div class="avaliacao-container">
+
+        <h2>Avalie esta receita! 😁</h2>
+
+        
+        <div class="rating">
+            <input type="radio" id="star5" name="estrela" value="5">
+            <label for="star5">★</label>
+
+            <input type="radio" id="star4" name="estrela" value="4">
+            <label for="star4">★</label>
+
+            <input type="radio" id="star3" name="estrela" value="3">
+            <label for="star3">★</label>
+
+            <input type="radio" id="star2" name="estrela" value="2">
+            <label for="star2">★</label>
+
+            <input type="radio" id="star1" name="estrela" value="1">
+            <label for="star1">★</label>
+        </div>
+
+        
+        <textarea id="comentario" placeholder="Escreva um comentário sobre esta receita..." rows="4"></textarea>
+
+        <button id="enviarAvaliacao">Enviar avaliação</button>
+
+
+        <div id="lista-avaliacoes"></div>
+
+    </div>
+
+    <script src="../assets/js/detalhes.js"></script>
+</body>
+</html>

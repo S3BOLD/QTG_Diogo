@@ -1,0 +1,602 @@
+/* ================= RESET BÁSICO ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Cores utilizadas no programa*/
+:root {
+  --dark: #333;
+  --light: #fff;
+  --gray: #f9f9f9;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: absolute;   /* fica sobre o hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* deixa a imagem aparecer por trás */
+  color: #fff;  /* texto branco pro contraste */
+  display: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 10; /* garante que fique por cima da imagem */
+ 
+}
+.logo b {
+  padding: 20px;
+}
+
+header .usuario{
+ display: flex;
+justify-content: right;
+
+}
+header .logo {
+  font-size: 100px;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5lh;
+  
+}
+
+
+/* Barra de pesquisa */
+
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  gap: 10px;
+}
+
+.busca-input {
+  padding: 12px 20px;
+  width: 50%;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.busca-btn {
+  padding: 12px 25px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.busca-btn:hover {
+  background-color: rgb(180, 0, 0);
+}
+
+
+
+/*muda o espaçamento entre as tags*/
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+/*estilos das tags superiores*/
+header nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/*cor da letra quando passa o mouse*/
+nav a:hover{
+    text-decoration: none;
+    color: #ff0303;
+}
+
+header .btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  
+  
+}
+
+/* Cabeçalho com imagem*/
+
+.hero {
+  height: 70vh;
+  background: url("https://static.vecteezy.com/ti/fotos-gratis/t2/6177733-fundo-laranja-abstratoe-fundo-de-verao-gratis-foto.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content:center; /*alinha letras no cetro*/
+  text-align: center;
+  color: var(--light);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 15px;
+ 
+}
+
+.hero p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: var(--primary);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+.services h2 {
+  margin-bottom: 30px; /*margem entre frase e botões*/
+  font-size: 30px; /*tamanho da letra da frase de adoção*/
+}
+
+/*cards projetos */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+  gap: 30px;
+  margin-left: 1rem;
+  padding: 50px;
+}
+.cards h3{
+  text-align: left;
+    margin-left: 40px;
+ 
+}
+.cards p {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.card {
+  display: block;             /* faz o <a> se comportar como bloco */
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px  #ffa530;
+  text-decoration: none;      /* remove sublinhado */
+  color: #000000;             /* cor do texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05); /* efeito subir e crescer */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);   /* sombra mais forte */
+}
+
+/* imagem retangulo dos cards */
+.retangulo-img {
+  width: 100%;
+  max-width: 300px; /* mantém o tamanho, mas evita quebrar no mobile */
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
+}
+
+/* ================= DESTAQUE ================= */
+.highlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+  /*fundo dos cards*/
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+}
+
+.highlight-text {
+  flex: 1;
+}
+
+.highlight-text p {
+  margin-bottom: 20px;
+  color: #000000;
+  text-align: left;
+  font-size: 12px;
+}
+
+.highlight-text .btn {
+  background: var(--primary);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--light);
+  text-decoration: none;
+  background-color: #5f7c62;;
+  text-align: center;
+  background: var(--primary);
+  padding: 10px 20px;
+  border-radius: 5px;
+  
+}
+
+.highlight-img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+aside{
+    flex: 1;
+    background-color: rgba(112, 99, 124, 0.507);
+    padding: 15px;
+    border: 1px solid beige;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color:  rgba(112, 99, 124, 0.562);
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #ffa530;
+  color: var(--light);
+  padding: 20px 50px;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+
+}
+
+footer ul a {
+  text-decoration: none;
+  color: var(--light);
+  font-weight:lighter;
+  text-decoration:none;
+  color: #f1f1f1;
+}
+
+/*TÍTULO E SUBTÍTULO DO INICIO DOS CARDS*/
+.titulo-section {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.titulo-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #333;
+}
+
+.titulo-section p {
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Linha após o título e subtítulo */
+.linha-titulo {
+  width: 80%;
+  height: 2px;
+  background-color: #ffa530;
+  margin: 10px auto 0 auto;
+}
+
+/* ================= BUSCA ================= */
+.busca-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.busca-container {
+  display: flex;
+  gap: 10px;
+}
+
+.busca-input {
+  width: 350px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.busca-btn {
+  padding: 12px 20px;
+  background-color: #ffa530;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.busca-btn:hover {
+  background-color: #c26f02;
+}
+
+/* ================= LISTA DE RECEITAS ================= */
+.btn-detalhes {
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px 15px;
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-detalhes:hover {
+  background-color: #b81d29;
+}
+
+.receitas-lista {
+  text-align: center;
+  padding: 20px;
+}
+
+.titulo-receitas {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.receitas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 0 40px;
+}
+
+.receita-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.receita-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.receita-card h3 {
+  margin-top: 10px;
+}
+
+.receita-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= PAGINAÇÃO ================= */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.page-btn {
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.page-btn:hover {
+  background: #eee;
+}
+
+/* ================= RESPONSIVIDADE ================ */
+
+/* TABLETS (até 1024px) */
+@media (max-width: 1024px) {
+
+  header .logo {
+    font-size: 60px;
+    margin-top: 0;
+  }
+
+  .cards,
+  .receitas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .retangulo-img {
+    max-width: 200px;
+    margin-left: 0;
+  }
+}
+
+/* CELULARES GRANDES (até 768px) */
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header .logo {
+    font-size: 45px;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cards,
+  .receitas-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .cards h3,
+  .cards p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .retangulo-img {
+    margin: 0 auto;
+  }
+
+  .highlight {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* CELULARES PEQUENOS (até 480px) */
+@media (max-width: 480px) {
+
+  header .logo {
+    font-size: 32px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .busca-input {
+    width: 100%;
+  }
+
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* =======================
+   Ajuste para monitores 19"
+   (até 1440px)
+   ======================= */
+@media (max-width: 1440px) {
+
+  header {
+    padding: 10px 20px;
+  }
+
+  header .logo {
+    font-size: 60px;   /* reduz o tamanho gigante */
+    margin-top: 10px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 60px; /* menor que os 80px atuais */
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+
+  /* GRID de 4 colunas → 3 colunas */
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  /* Imagens não ultrapassam */
+  .retangulo-img {
+    max-width: 250px;
+    margin-left: 0;
+  }
+}
+
+/* =======================
+   Ajuste fino p/ 1366px
+   ======================= */
+@media (max-width: 1366px) {
+
+  header .logo {
+    font-size: 48px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .retangulo-img {
+    max-width: 220px;
+  }
+}
